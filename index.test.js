@@ -1,4 +1,4 @@
-const { push, pop, unshift, shift, hasDuplicates } = require("./index.js");
+const { push, pop, unshift, shift, hasDuplicates, countLetters } = require("./index.js");
 
 describe("stuffs", () => {
   it("should add an element to an array", () => {
@@ -35,5 +35,15 @@ describe("stuffs", () => {
     const arr2 = ['j', 'o', 'w', 'y'];
     expect(hasDuplicates(arr)).toBe(true)
     expect(hasDuplicates(arr2)).toBe(false)
+  })
+
+  it('should count letters and return an object', () => {
+    const arr = ['a', 'c', 'c', 'b', 'a', 'c', 'b', 'b', 'd', 'c'];
+    expect(countLetters(arr)).toEqual({
+      a: 2,
+      c: 4,
+      b: 3,
+      d: 1
+    })
   })
 });

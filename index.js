@@ -40,4 +40,10 @@ function hasDuplicates(arr){
     }
     return false;
 }
-module.exports = { push, pop, unshift, shift, hasDuplicates };
+
+function countLetters(arr){
+    const counts = {};
+    arr.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+    return counts;
+}
+module.exports = { push, pop, unshift, shift, hasDuplicates, countLetters };
