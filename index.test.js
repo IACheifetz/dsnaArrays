@@ -10,8 +10,9 @@ describe("stuffs", () => {
 
  it("should remove an element from an array", () => {
     const arr = ["a", "b", "c"];
-    
+    expect(pop(arr)).toBe("c");
+    expect(arr.length).toBe(2);
     expect(arr[1]).toBe("b");
   });
-
+  
 });
