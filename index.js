@@ -20,6 +20,14 @@ function unshift(arr, item) {
     }
     arr[0] = item;
     return arr.length;
-
 }
-module.exports = { push, pop, unshift };
+
+function shift(arr) {
+    const firstItem = arr[0];
+    for(let i = 1; i < arr.length; i++) {
+        arr[i - 1] = arr[i];
+    }
+    arr.length = arr.length - 1;
+    return firstItem;
+}
+module.exports = { push, pop, unshift, shift };
